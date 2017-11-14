@@ -8,7 +8,8 @@
     "react-scripts": "1.0.17",
     "react-thunk": "^1.0.0",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "superagent": "^3.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,7 +17,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "superagent": "^3.8.1"
-  }
+  "devDependencies": {}
 }
