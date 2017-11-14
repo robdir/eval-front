@@ -22,7 +22,7 @@ class App extends Component {
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
         <div className="App">
         <Navigation />
-        <p> Such empty... </p>
+        <Routes />
         </div>
       </MuiThemeProvider>
     )
