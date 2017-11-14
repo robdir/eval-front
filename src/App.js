@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 // ...
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import muiTheme from './assets/styles/theme'
-
 import './App.css'
 
 class App extends Component {
