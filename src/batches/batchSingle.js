@@ -27,7 +27,7 @@ class BatchSingle extends PureComponent {
       <div>
       <h3> Batch Number: {batchNum} </h3>
       <ul>
-      <p> Students: {students.length} </p>
+      <p> Students:  </p>
       <p> Start Date: {startsAt} </p>
       <p> End Date: {endsAt} </p>
       </ul>
