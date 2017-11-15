@@ -1,23 +1,31 @@
 import ApiClient from '../../api/client'
-import loading from '../loading'
-import loadError from '../loading'
+import {
+  APP_LOADING,
+  APP_DONE_LOADING,
+  LOAD_ERROR,
+  LOAD_SUCCESS
+} from '../loading'
+
 export const GRABBED_BATCHES = 'GRABBED_BATCHES'
 
 const api = new ApiClient()
 
 export default () => {
   return dispatch => {
-    dispatch(loading(true))
+    dispatch({ type: APP_LOADING })
 
     api.get('/batches')
       .then(res => {
-        dispatch(loading(false))
+        dispatch({ type: APP_DONE_LOADING })
+        dispatch({ type: LOAD_SUCCESS })
         dispatch({ type: GRABBED_BATCHES, payload: res.body })
       })
-      .catch(err => {
-        console.error(err)
-        dispatch(loading(false))
-        dispatch(loadError(err))
+      .catch(error => {
+        dispatch({ type: APP_DONE_LOADING })
+        dispatch({
+          type: LOAD_ERROR,
+          payload: error.message
+        })
       })
   }
 }
