@@ -1,8 +1,8 @@
-import { GRABBED_BATCHES } from '../actions/batches'
+import { FETCH_STUDENTS } from '../actions/students'
 
 export default (currentState = [], {type, payload} = {}) => {
   switch(type){
-    case  GRABBED_BATCHES:
+    case  FETCH_STUDENTS:
       return [...payload]
 
     default :
