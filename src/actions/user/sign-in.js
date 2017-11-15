@@ -24,8 +24,7 @@ export default ({ email, password}) => {
 
         api.storeToken(jwt)
 
-        // Redirect programatically to home page
-        // dispatch(replace('/'))
+        dispatch(replace('/'))
 
         return api.get('/users/me')
       })
