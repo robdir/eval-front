@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Navigation from './components/UI/Navigation'
 import Routes from './routes'
+import BatchesContainer from './batches/batchesContainer'
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
@@ -22,6 +23,7 @@ class App extends Component {
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
         <div className="App">
         <Navigation />
+        <BatchesContainer />
         <Routes />
         </div>
       </MuiThemeProvider>
