@@ -25,7 +25,7 @@ export class StudentsContainer extends PureComponent {
     }
   }
 
-const mapStateToProps = ({ students }) => ({ students })
+const mapStateToProps = ({ batches }) => ({ batches })
 const mapDispatchToProps = { fetchStudents }
 
 export default connect(mapStateToProps, mapDispatchToProps)(StudentsContainer)

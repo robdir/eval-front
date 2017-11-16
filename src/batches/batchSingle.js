@@ -33,7 +33,7 @@ class BatchSingle extends PureComponent {
       <p> Start Date: {startsAt} </p>
       <p> End Date: {endsAt} </p>
       </ul>
-      <Link to="/"> View all students </Link>
+      <Link to="/:batchId/students"> View all students </Link>
       </div>
       </article>
     )
