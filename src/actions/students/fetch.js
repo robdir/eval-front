@@ -9,7 +9,6 @@ import {
 export const FETCH_STUDENTS = 'FETCH_STUDENTS'
 
 const api = new ApiClient()
-
 export const fetchStudents = (batch) => {
   return dispatch => {
     dispatch({ type: APP_LOADING })
