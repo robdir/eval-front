@@ -1,6 +1,10 @@
 import grabBatches, { GRABBED_BATCHES } from './grab'
+import fetchStudents, { FETCH_STUDENTS } from './grab'
+
 
 export {
   grabBatches,
-  GRABBED_BATCHES
+  fetchStudents,
+  GRABBED_BATCHES,
+  FETCH_STUDENTS,
 }
