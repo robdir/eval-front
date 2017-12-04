@@ -11,7 +11,9 @@ Our goal was to a create a 'Student Evaluation Tool' - namely an application whi
 -Only be accessed by a user with administrator privileges. 
 
 This application was entirely written within the ReactJS framework (see bootstrapped with create-react-app below), both
-on the front-end(React and Redux) and back-end (Express API) <https://github.com/robdir/evaluation-app-API>.
+on the front-end(React and Redux) and back-end (Express API).
+
+<https://github.com/robdir/evaluation-app-API>.
 ----------------------------------------------------------------------------------------------------------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
