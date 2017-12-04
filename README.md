@@ -4,11 +4,11 @@ as a final evaluation. It should be noted that while I passed the evaluation, th
 progress.
 
 Our goal was to a create a 'Student Evaluation Tool' - namely an application which could:
--List all 'batches' of classes or students
--List all students belonging to a class, with related data
--'Randomly' select a student from the selected class
--Store an evaluation of the student for the current date (red/orange/green)
--Only be accessed by a user with administrator privileges. 
+---List all 'batches' of classes or students
+---List all students belonging to a class, with related data
+---'Randomly' select a student from the selected class
+---Store an evaluation of the student for the current date (red/orange/green)
+---Only be accessed by a user with administrator privileges. 
 
 This application was entirely written within the ReactJS framework (see bootstrapped with create-react-app below), both
 on the front-end(React and Redux) and back-end (Express API).
