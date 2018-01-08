@@ -1,10 +1,13 @@
 article.Batch {
-  flex: 1;
-  border-radius: .1em;
+  -webkit-box-shadow: 7px 6px 5px 1px #542b2b;
+  box-shadow: 7px 6px 5px 1px #ded2d2;
+  margin: 1em;
+  padding: 5px;
+  background-color: #f5fbfd12;
+  border: solid 2px #e8eaea;
+  border-radius: 1px;
+  height: fit-content;
   overflow: hidden;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.117647), 0 1px 4px rgba(0, 0, 0, 0.117647);
   display: flex;
-  flex-direction: column;
-  margin: 1em .8em;
-  background-color: #fff;
-  padding: 2.2em; }
+  flex-direction: row;
+}

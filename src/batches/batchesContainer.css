@@ -1,0 +1,4 @@
+.BatchesContainer {
+    display: flex;
+    flex-direction: row;
+}

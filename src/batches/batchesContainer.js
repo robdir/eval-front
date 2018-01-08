@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { grabBatches } from '../actions/batches'
 import { connect } from 'react-redux'
 import BatchSingle from './batchSingle'
+import './batchesContainer.css'
 
 export class BatchesContainer extends PureComponent {
   componentWillMount() {
