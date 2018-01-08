@@ -1,4 +1,6 @@
 .BatchesContainer {
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
+    width: fit-content;
 }
