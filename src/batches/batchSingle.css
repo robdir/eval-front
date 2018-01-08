@@ -1,9 +1,9 @@
 article.Batch {
-  margin: 1em;
-  padding: 5px;
+  margin: 1.5em;
+  padding: 10px;
   background-color: #f5fbfd12;
-  border: solid 2px #e8eaea;
-  border-radius: 1px;
+  border: solid 15px rgb(0, 151, 167);
+  border-radius: 10px;
   height: fit-content;
   overflow: hidden;
   display: flex;

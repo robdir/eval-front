@@ -16,7 +16,7 @@ class BatchSingle extends PureComponent {
       ratings: PropTypes.shape({
         colour: PropTypes.number.isRequired,
         comments: PropTypes.string,
-        ratedAt: PropTypes.string
+        ratedAt: PropTypes.string 
       })
     })
   }
@@ -29,7 +29,8 @@ class BatchSingle extends PureComponent {
       <div>
       <h3> Batch Number: {batchNum} </h3>
       <ul>
-      <p> Students: {students.length} </p>
+      <p> Students ({students.length}) : </p>
+      <p> {students.map(i => i.name)} </p>
       <p> Start Date: {startsAt} </p>
       <p> End Date: {endsAt} </p>
       </ul>

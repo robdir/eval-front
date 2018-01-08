@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { fetchStudents } from '../actions/students'
 import { connect } from 'react-redux'
 import StudentSingle from './studentSingle'
 
@@ -25,7 +24,4 @@ export class StudentsContainer extends PureComponent {
     }
   }
 
-const mapStateToProps = ({ students }) => ({ students })
-const mapDispatchToProps = { fetchStudents }
-
-export default connect(mapStateToProps, mapDispatchToProps)(StudentsContainer)
+export default connect(StudentsContainer)
