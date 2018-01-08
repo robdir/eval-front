@@ -16,11 +16,13 @@ export class BatchesContainer extends PureComponent {
   }
 
   render() {
+    const { batches } = this.props
+
     return(
         <div>
           <main>
             < div className="BatchesContainer">
-              { this.props.batches.map(this.renderBatch) }
+              { batches.map(this.renderBatch) }
             </div>
           </main>
         </div>

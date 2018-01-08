@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import './styles/studentSingle.css'
 
 class StudentSingle extends PureComponent {
   static propTypes = {
@@ -20,15 +21,20 @@ class StudentSingle extends PureComponent {
   }
 
   render() {
-    const { students } = this.props
-
+    const { batchNum, students } = this.props
+    
     return(
       <article className="Student">
       <div>
       <h3 className="studentName"> {students.map(i => i.name)} </h3>
-      <div className="studentImage">
-      <img alt="mug shot" src=""/>
-      </div>
+      <p> Batch: {batchNum} </p>
+
+      {students.map((item, index) =>
+        <div key={index}>
+        <img src={item.picture} alt="mug-shot"/>
+        </div>
+      )}
+      
       </div>
       </article>
     )
