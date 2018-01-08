@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react'
+import { grabBatches } from '../actions/batches'
 import { connect } from 'react-redux'
 import StudentSingle from './studentSingle'
 
 export class StudentsContainer extends PureComponent {
   componentWillMount() {
-    this.props.fetchStudents()
+    this.props.grabBatches()
   }
 
   renderStudent(student, index) {
@@ -15,13 +16,19 @@ export class StudentsContainer extends PureComponent {
 
   render() {
     return(
-        <div className="StudentsContainer">
+      <div>
           <main>
-            { this.props.students.map(this.renderStudent) }
+            <div className="StudentsContainer">
+              { this.props.batches.map(this.renderStudent) }
+            </div>
           </main>
-        </div>
+      </div>
       )
     }
   }
 
-export default connect(StudentsContainer)
+const mapStateToProps = ({ batches }) => ({ batches })
+const mapDispatchToProps = { grabBatches }
+
+export default connect(mapStateToProps, mapDispatchToProps)(StudentsContainer)
+

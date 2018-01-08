@@ -13,7 +13,7 @@ export default class Routes extends Component {
     return (
       <div>
       <Route exact path="/" component={BatchesContainer} />
-      <Route exact path="/:batchId/students" component={StudentsContainer} />
+      <Route exact path="/students" component={StudentsContainer} />
       <Route path="/sign-in" component={SignIn} />
       <Route path="/sign-up" component={SignUp} />
       </div>

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import './batchSingle.css'
+import './styles/batchSingle.css'
 
 class BatchSingle extends PureComponent {
   static propTypes = {
@@ -34,7 +34,7 @@ class BatchSingle extends PureComponent {
       <p> Start Date: {startsAt} </p>
       <p> End Date: {endsAt} </p>
       </ul>
-      <Link to="/:batchId/students"> View all students </Link>
+      <Link to="/students"> View all students </Link>
       </div>
       </article>
     )
