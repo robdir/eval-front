@@ -21,6 +21,11 @@ class BatchSingle extends PureComponent {
     })
   }
 
+  viewBatch = batchId => event => {
+    const batchId = this.props.match.params.batchId
+      this.props.push(`/${batchId}`)
+  }
+
   render() {
     const { batchNum, startsAt, endsAt, students } = this.props
 
@@ -34,7 +39,7 @@ class BatchSingle extends PureComponent {
       <p> Start Date: {startsAt} </p>
       <p> End Date: {endsAt} </p>
       </ul>
-      <Link to="/:batchId/students"> View all students </Link>
+      <Link to="/:batchId/"> View all students </Link>
       </div>
       </article>
     )

@@ -31,21 +31,7 @@ export class StudentsContainer extends PureComponent {
     }
   }
 
-const mapStateToProps = ({ batches }, { match }) => {
-  const students = batches.map( i => i.students )
-    const student = students.reduce((prev, next) => {
-    if (next._id === match.params.batchId) {
-      return next
-    }
-    return prev
-  }, {})
-
-  return {
-    student
-  }
-}
-
-// const mapStateToProps = ({ batches }) => ({ batches })
+const mapStateToProps = ({ batches }) => ({ batches })
 
 const mapDispatchToProps = { grabBatches }
 
