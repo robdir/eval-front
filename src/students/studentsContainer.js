@@ -7,7 +7,6 @@ import './styles/studentsContainer.css'
 export class StudentsContainer extends PureComponent {
   componentWillMount() {
     this.props.grabBatches()
-    const batchId = this.props.match.params.batchId
   }
 
   renderStudent(student, index) {

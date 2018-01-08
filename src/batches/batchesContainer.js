@@ -31,6 +31,7 @@ export class BatchesContainer extends PureComponent {
 }
 
 const mapStateToProps = ({ batches }) => ({ batches })
+
 const mapDispatchToProps = { grabBatches }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BatchesContainer)

@@ -1,7 +1,13 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { push } from 'react-router-redux'
+import RaisedButton from 'material-ui/RaisedButton'
 import './styles/batchSingle.css'
+
+const style = {
+  margin: 12
+}
 
 class BatchSingle extends PureComponent {
   static propTypes = {
@@ -22,12 +28,12 @@ class BatchSingle extends PureComponent {
   }
 
   viewBatch = batchId => event => {
-    const batchId = this.props.match.params.batchId
-      this.props.push(`/${batchId}`)
+    this.props.push(`/${batchId}`)
   }
 
+
   render() {
-    const { batchNum, startsAt, endsAt, students } = this.props
+    const { batchNum, startsAt, endsAt, students, _id } = this.props
 
     return(
       <article className="Batch">
@@ -36,14 +42,19 @@ class BatchSingle extends PureComponent {
       <ul>
       <p> Students ({students.length}) : </p>
       <p> {students.map(i => i.name)} </p>
-      <p> Start Date: {startsAt} </p>
-      <p> End Date: {endsAt} </p>
+      <p> Start Date: {startsAt.substr(0,10)} </p>
+      <p> End Date: {endsAt.substr(0,10)} </p>
+      <RaisedButton label="Click to view students" style={style} onClick={this.viewBatch(_id)} />
       </ul>
-      <Link to="/:batchId/"> View all students </Link>
       </div>
       </article>
     )
   }
 }
 
-export default BatchSingle
+
+const mapStateToProps = ({ batches }) => ({ batches })
+
+const mapDispatchToProps = { push }
+
+export default connect(mapStateToProps, mapDispatchToProps)(BatchSingle)
