@@ -1,12 +1,19 @@
 import React, { PureComponent } from 'react'
-import { grabBatches } from '../actions/batches'
+import {grabBatch} from '../actions/batches'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import StudentSingle from './studentSingle'
 import './styles/studentsContainer.css'
 
 export class StudentsContainer extends PureComponent {
-  componentWillMount() {
-    this.props.grabBatches()
+  static propTypes = {
+    grabBatch: PropTypes.func.isRequired
+  }
+
+  componentDidMount() {
+    const { batchId } = this.props.match.params
+    const { grabBatch } = this.props
+    grabBatch(batchId)
   }
 
   renderStudent(student, index) {
@@ -16,14 +23,15 @@ export class StudentsContainer extends PureComponent {
   }
 
   render() {
-    const {batches, _id} = this.props
+    const {batch} = this.props
+  //  const currentBatch = batches.filter(i => i.student) hack for current batch
 
     return(
       <div>
           <main>
             <div className="StudentsContainer">
-              {batches.map(this.renderStudent)}
-               {this.props.match.params.batchId}
+              <p>{console.log(batch)}</p>
+              {this.props.match.params.batchId}
             </div>
           </main>
       </div>
@@ -31,10 +39,15 @@ export class StudentsContainer extends PureComponent {
     }
   }
 
-const mapStateToProps = ({ batches }) => ({ batches })
+const mapStateToProps = ({ batches }, { match }) => {
+  const batch = batches.filter((b) => (b._id === match.params.batchId))[0]
+  console.log(batch)
+    return {
+      batch
+  }
+}
 
-const mapDispatchToProps = { grabBatches }
 
-export default connect(mapStateToProps, mapDispatchToProps)(StudentsContainer)
+export default connect(mapStateToProps, { grabBatch })(StudentsContainer)
 
 

@@ -35,15 +35,13 @@ export default () => {
 export const grabBatch = (batchId) => {
   return dispatch => {
     dispatch({ type: APP_LOADING })
-
     api.get(`/${batchId}`)
-      .then((res) => {
+      .then((result) => {
         dispatch({ type: APP_DONE_LOADING })
         dispatch({ type: LOAD_SUCCESS })
-
         dispatch({
           type: GRAB_BATCH,
-          payload: res.body
+          payload: result.body
         })
       })
       .catch((error) => {

@@ -6,8 +6,19 @@ export default (currentState = [], {type, payload} = {}) => {
     case  GRABBED_BATCHES:
       return [...payload]
 
-    case  GRAB_BATCH:
-      return [...payload]
+
+
+    case  GRAB_BATCH :
+    const batchIds = currentState.map(g => g._id)
+      if (batchIds.indexOf(payload._id) < 0) {
+        return [{ ...payload }].concat(currentState)
+    }
+        return currentState.map((batch) => {
+          if (batch._id === payload._id) {
+        return { ...payload }
+    }
+        return batch
+    })
 
     default :
       return currentState
