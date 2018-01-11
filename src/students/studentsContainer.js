@@ -30,8 +30,7 @@ export class StudentsContainer extends PureComponent {
       <div>
           <main>
             <div className="StudentsContainer">
-              <p>{console.log(batch)}</p>
-              {this.props.match.params.batchId}
+             <p> {...batch} </p>
             </div>
           </main>
       </div>

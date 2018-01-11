@@ -1,5 +1,5 @@
-import grabBatches, { GRABBED_BATCHES } from './grab'
-import {grabBatch, GRAB_BATCH } from './grab'
+import grabBatches, { GRABBED_BATCHES } from './grab' // default epxport
+import {grabBatch, GRAB_BATCH } from './grab' // NON-DEFAULT EXPORT
 
 
 export {
