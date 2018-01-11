@@ -4,13 +4,14 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import StudentSingle from './studentSingle'
 import './styles/studentsContainer.css'
+import batches from '../reducers/batches';
 
 export class StudentsContainer extends PureComponent {
   static propTypes = {
-    grabBatch: PropTypes.func.isRequired
+    grabBatch: PropTypes.func.isRequired,
   }
 
-  componentDidMount() {
+  componentWillMount() {
     const { batchId } = this.props.match.params
     const { grabBatch } = this.props
     grabBatch(batchId)
@@ -23,14 +24,13 @@ export class StudentsContainer extends PureComponent {
   }
 
   render() {
-    const {batch} = this.props
-  //  const currentBatch = batches.filter(i => i.student) hack for current batch
+    const {batches} = this.props 
+    if (!batches) {return null} 
 
     return(
       <div>
           <main>
             <div className="StudentsContainer">
-             <p> {...batch} </p>
             </div>
           </main>
       </div>
@@ -38,13 +38,7 @@ export class StudentsContainer extends PureComponent {
     }
   }
 
-const mapStateToProps = ({ batches }, { match }) => {
-  const batch = batches.filter((b) => (b._id === match.params.batchId))[0]
-  console.log(batch)
-    return {
-      batch
-  }
-}
+const mapStateToProps = ({ batches }, { match }) => ({batches})
 
 
 export default connect(mapStateToProps, { grabBatch })(StudentsContainer)

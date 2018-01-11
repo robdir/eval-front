@@ -43,4 +43,7 @@ class StudentSingle extends PureComponent {
   }
 }
 
-export default StudentSingle
+const mapStateToProps = ({ batches }) => ({ batches })
+
+
+export default connect(mapStateToProps)(StudentSingle)

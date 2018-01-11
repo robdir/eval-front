@@ -11,7 +11,7 @@ export default (currentState = [], {type, payload} = {}) => {
     case  GRAB_BATCH :
     const batchIds = currentState.map(g => g._id)
       if (batchIds.indexOf(payload._id) < 0) {
-        return [{ ...payload }]
+        return { ...payload }
     }
         return currentState.map((batch) => {
           if (batch._id === payload._id) {
