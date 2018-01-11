@@ -36,7 +36,7 @@ export const grabBatch = (batchId) => {
   return dispatch => {
     dispatch({ type: APP_LOADING })
 
-    api.get(`/batches/${batchId}`)
+    api.get(`/${batchId}`)
       .then((res) => {
         dispatch({ type: APP_DONE_LOADING })
         dispatch({ type: LOAD_SUCCESS })
