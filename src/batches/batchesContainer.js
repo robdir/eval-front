@@ -16,7 +16,7 @@ export class BatchesContainer extends PureComponent {
   }
 
   render() {
-    const { batches } = this.props
+    const { batches, _id } = this.props
 
     return(
         <div>

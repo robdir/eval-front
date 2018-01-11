@@ -44,7 +44,8 @@ class BatchSingle extends PureComponent {
       <p> {students.map(i => i.name)} </p>
       <p> Start Date: {startsAt.substr(0,10)} </p>
       <p> End Date: {endsAt.substr(0,10)} </p>
-      <RaisedButton label="Click to view students" style={style} onClick={this.viewBatch(_id)} />
+      <RaisedButton label="Click to view students" style={style}
+       onClick={this.viewBatch(_id)} />
       </ul>
       </div>
       </article>

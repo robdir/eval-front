@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { push } from 'react-router-redux'
 import './styles/studentSingle.css'
 
 class StudentSingle extends PureComponent {
@@ -34,7 +36,7 @@ class StudentSingle extends PureComponent {
         <img src={item.picture} alt="mug-shot"/>
         </div>
       )}
-      
+
       </div>
       </article>
     )

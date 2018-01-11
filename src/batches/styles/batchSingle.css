@@ -8,4 +8,10 @@ article.Batch {
   overflow: hidden;
   display: flex;
   flex-direction: row;
+  text-align: center;
+}
+
+article.Batch, ul {
+  display: inline-block;
+  text-align: center;
 }
