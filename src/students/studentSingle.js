@@ -23,12 +23,12 @@ class StudentSingle extends PureComponent {
   }
 
   render() {
-    const { batchNum, students } = this.props
+    const { batchNum, students, batches } = this.props
     
     return(
       <article className="Student">
       <div>
-      <h3 className="studentName"> {students.map(i => i.name)} </h3>
+      <h3 className="studentName"> {batches[0].students.map(i => i.name)} </h3>
       <p> Batch: {batchNum} </p>
 
       {students.map((item, index) =>

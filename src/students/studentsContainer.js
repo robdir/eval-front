@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import StudentSingle from './studentSingle'
 import './styles/studentsContainer.css'
-import batches from '../reducers/batches';
 
 export class StudentsContainer extends PureComponent {
   static propTypes = {
@@ -15,6 +14,7 @@ export class StudentsContainer extends PureComponent {
     const { batchId } = this.props.match.params
     const { grabBatch } = this.props
     grabBatch(batchId)
+    console.log('yo')
   }
 
   renderStudent(student, index) {
@@ -31,6 +31,8 @@ export class StudentsContainer extends PureComponent {
       <div>
           <main>
             <div className="StudentsContainer">
+            {batches.map(this.renderStudent)}
+            {console.log(batches)}
             </div>
           </main>
       </div>
