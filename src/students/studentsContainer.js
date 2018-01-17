@@ -32,7 +32,6 @@ export class StudentsContainer extends PureComponent {
           <main>
             <div className="StudentsContainer">
             {batches.map(this.renderStudent)}
-            {console.log(batches)}
             </div>
           </main>
       </div>

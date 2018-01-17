@@ -31,7 +31,7 @@ class StudentSingle extends PureComponent {
       <h3 className="studentName"> {batches.students.map(i => i.name)} </h3>
       <p> Batch: {batchNum} </p>
 
-      {batches.students.map((item, index) =>
+      {batches[0].students.map((item, index) =>
         <div key={index}>
         <img src={item.picture} alt="mug-shot"/>
         </div>
