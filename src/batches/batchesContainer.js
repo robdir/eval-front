@@ -18,11 +18,12 @@ export class BatchesContainer extends PureComponent {
   }
 
   render() {
-    const { batches, _id } = this.props
+    const { batches } = this.props
 
     return(
         <div>
           <Title content="All Batches" />
+          <RaisedButton label="Add batch"/>
           <main>
             < div className="BatchesContainer">
               { batches.map(this.renderBatch) }

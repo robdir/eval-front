@@ -3,6 +3,8 @@ import {grabBatch} from '../actions/batches'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import StudentSingle from './studentSingle'
+import Title from '../components/UI/Title'
+import RaisedButton from 'material-ui/RaisedButton'
 import './styles/studentsContainer.css'
 
 export class StudentsContainer extends PureComponent {
@@ -27,6 +29,8 @@ export class StudentsContainer extends PureComponent {
 
     return(
       <div>
+        <Title content='All students from batch'/>
+        <RaisedButton label='Click to add student'/>
           <main>
             <div className="StudentsContainer">
             {singleBatch.map(this.renderStudent)}
