@@ -23,19 +23,19 @@ class StudentSingle extends PureComponent {
   }
 
   render() {
-    const { batchNum, students, batches } = this.props
+    // const { batchNum, students } = this.props
     
     return(
       <article className="Student">
       <div>
-      <h3 className="studentName"> {batches.students.map(i => i.name)} </h3>
-      <p> Batch: {batchNum} </p>
+      <h3 className="studentName"> {} </h3>
+      <p> Batch: {JSON.stringify(this.props.students)} </p>
 
-      {batches[0].students.map((item, index) =>
+      {/* {batches[0].students.map((item, index) =>
         <div key={index}>
         <img src={item.picture} alt="mug-shot"/>
         </div>
-      )}
+      )} */}
 
       </div>
       </article>
@@ -43,7 +43,7 @@ class StudentSingle extends PureComponent {
   }
 }
 
-const mapStateToProps = ({ batches }) => ({ batches })
+const mapStateToProps = ({ singleBatch }) => ({ singleBatch })
 
 
 export default connect(mapStateToProps)(StudentSingle)

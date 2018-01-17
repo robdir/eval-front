@@ -14,7 +14,6 @@ export class StudentsContainer extends PureComponent {
     const { batchId } = this.props.match.params
     const { grabBatch } = this.props
     grabBatch(batchId)
-    console.log('yo')
   }
 
   renderStudent(student, index) {
@@ -24,14 +23,13 @@ export class StudentsContainer extends PureComponent {
   }
 
   render() {
-    const {batches} = this.props 
-    if (!batches) {return null} 
+    const {singleBatch} = this.props 
 
     return(
       <div>
           <main>
             <div className="StudentsContainer">
-            {batches.map(this.renderStudent)}
+            {singleBatch.map(this.renderStudent)}
             </div>
           </main>
       </div>
@@ -39,7 +37,7 @@ export class StudentsContainer extends PureComponent {
     }
   }
 
-const mapStateToProps = ({ batches }, { match }) => ({batches})
+const mapStateToProps = ({ singleBatch }, { match }) => ({singleBatch})
 
 
 export default connect(mapStateToProps, { grabBatch })(StudentsContainer)
