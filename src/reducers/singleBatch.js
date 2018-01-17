@@ -5,7 +5,7 @@ export default (currentState = [], { type, payload } = {}) => {
     switch (type) {
 
         case GRAB_BATCH:
-        return currentState.concat(payload)
+        return [payload]
 
         default:
             return currentState

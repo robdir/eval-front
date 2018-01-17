@@ -23,13 +23,15 @@ class StudentSingle extends PureComponent {
   }
 
   render() {
-    // const { batchNum, students } = this.props
+    const { batchNum, students } = this.props
     
     return(
       <article className="Student">
       <div>
       <h3 className="studentName"> {} </h3>
-      <p> Batch: {JSON.stringify(this.props.students)} </p>
+      <p> Batch: {batchNum} </p>
+
+      {JSON.stringify(this.props.students)}
 
       {/* {batches[0].students.map((item, index) =>
         <div key={index}>

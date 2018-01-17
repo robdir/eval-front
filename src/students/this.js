@@ -1,3 +1,4 @@
+var students = 
 [
     {"name":"Jodoc Hafsah",
     "picture":"https://randomuser.me/api/portraits/men/87.jpg",
@@ -18,3 +19,6 @@
         ]
     }
 ]
+
+var name = students.filter(i => i.name)
+console.log(name)
