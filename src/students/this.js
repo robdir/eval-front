@@ -21,4 +21,4 @@ var students =
 ]
 
 var name = students.filter(i => i.name)
-console.log(name)
+console.log(students[0].name)
