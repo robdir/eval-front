@@ -6,7 +6,9 @@ export default (currentState = [], {type, payload} = {}) => {
     case  GRABBED_BATCHES:
       return [...payload]
 
-    case 
+    case CREATE_BATCH:
+      const newBatch = {...payload}
+      return [newBatch.concat(currentState)]
 
     default :
       return currentState

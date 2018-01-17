@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react'
 import { grabBatches } from '../actions/batches'
 import { connect } from 'react-redux'
 import BatchSingle from './batchSingle'
+import Title from '../components/UI/Title'
+import RaisedButton from 'material-ui/RaisedButton'
 import './styles/batchesContainer.css'
 
 export class BatchesContainer extends PureComponent {
@@ -20,6 +22,7 @@ export class BatchesContainer extends PureComponent {
 
     return(
         <div>
+          <Title content="All Batches" />
           <main>
             < div className="BatchesContainer">
               { batches.map(this.renderBatch) }
