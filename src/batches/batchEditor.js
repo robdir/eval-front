@@ -20,15 +20,16 @@ class BatchEditor extends PureComponent {
         createBatch: PropTypes.func.isRequired,
     }
 
-    state = {} // necessary?
+    state = {}
 
     submitBatch(event) {
         event.preventDefault()
         const batch = {
             batchNum: this.refs.batchNum.getValue(),
-            startDate: this.refs.startDate.getValue(),
-            endDate: this.refs.endDate.getValue(),
+            startsAt: this.refs.startsAt.getValue(),
+            endsAt: this.refs.endsAt.getValue(),
         }
+        console.log(batch)
         this.props.createBatch(batch)
         this.refs.form.reset()
     }
@@ -40,7 +41,8 @@ class BatchEditor extends PureComponent {
                     <form onSubmit={this.submitBatch.bind(this)} ref="form">
                         <div className='input'>
                             <TextField
-                             ref='batchNum' 
+                             id='batchNum'
+                             ref='batchNum'
                              type='number'
                              placeholder="Batch Number"
                              inputStyle={inputStyle}
@@ -49,7 +51,8 @@ class BatchEditor extends PureComponent {
                         <div className='input'>
                             <p> Start Date: </p>
                             <TextField
-                            ref='startDate'
+                            id='startsAt'
+                            ref='startsAt'
                             type='date'
                             inputStyle={inputStyle}
                             />
@@ -57,7 +60,8 @@ class BatchEditor extends PureComponent {
                         <div className='input'>
                             <p> End Date: </p>
                             <TextField
-                             ref='endDate'
+                             id='endsAt'
+                             ref='endsAt'
                              type='date'
                              inputStyle={inputStyle}
                              />

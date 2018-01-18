@@ -13,8 +13,8 @@ class BatchSingle extends PureComponent {
   static propTypes = {
     _id: PropTypes.string.isRequired,
     batchNum: PropTypes.number.isRequired,
-    startsAt: PropTypes.instanceOf(Date).isRequired,
-    endsAt: PropTypes.instanceOf(Date).isRequired,
+    startsAt: PropTypes.string.isRequired,
+    endsAt: PropTypes.string.isRequired,
     students: PropTypes.shape({
       _id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
@@ -37,13 +37,13 @@ class BatchSingle extends PureComponent {
 
     return(
       <article className="Batch">
-        <div classname='batch_single'>
+        <div className='batch_single'>
           <h3> Batch Number: {batchNum} </h3>
             <ul>
               <p> Students ({students.length}) : </p>
               <p> {students.map(i => i.name)} </p>
-              <p> Start Date: {startsAt.substr(0,10)} </p>
-              <p> End Date: {endsAt.substr(0,10)} </p>
+              <p> Start Date: {startsAt} </p>
+              <p> End Date: {endsAt} </p>
               <RaisedButton
                 label="Click to view students"
                 style={style}
