@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react'
 import { connect } from 'react-redux'
-import { CREATE_BATCH } from '../actions/batches'
+import { createBatch } from '../actions/batches'
 import PropTypes from 'prop-types'
 import Title from '../components/UI/Title'
 import TextField from 'material-ui/TextField'
@@ -17,7 +17,7 @@ const inputStyle={
 
 class BatchEditor extends PureComponent {
     static propTypes = {
-        CREATE_BATCH: PropTypes.func.isRequired,
+        createBatch: PropTypes.func.isRequired,
     }
 
     state = {} // necessary?
@@ -29,7 +29,7 @@ class BatchEditor extends PureComponent {
             startDate: this.refs.startDate.getValue(),
             endDate: this.refs.endDate.getValue(),
         }
-        this.props.CREATE_BATCH(batch)
+        this.props.createBatch(batch)
         this.refs.form.reset()
     }
 
@@ -59,15 +59,15 @@ class BatchEditor extends PureComponent {
                             <TextField
                              ref='endDate'
                              type='date'
-                            inputStyle={inputStyle}
+                             inputStyle={inputStyle}
                              />
                         </div>
                     </form>
                     <RaisedButton
-                        style={buttonStyle}
-                        onClick={ this.submitBatch.bind(this)}
-                        label="Add batch"
-                        primary={true}/>
+                    style={buttonStyle}
+                    onClick={ this.submitBatch.bind(this)}
+                    label="Add batch"
+                    primary={true}/>
             </div>
         )
     }
@@ -75,4 +75,4 @@ class BatchEditor extends PureComponent {
 
 const mapStateToProps = ({ batches }) => ({ batches })
 
-export default connect(mapStateToProps, { CREATE_BATCH })(BatchEditor)
+export default connect(mapStateToProps, { createBatch })(BatchEditor)
