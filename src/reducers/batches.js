@@ -8,7 +8,7 @@ export default (currentState = [], {type, payload} = {}) => {
 
     case CREATE_BATCH:
       const newBatch = {...payload}
-      return [newBatch.concat(currentState)]
+      return [newBatch].concat(currentState)
 
     default :
       return currentState
