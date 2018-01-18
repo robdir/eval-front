@@ -24,7 +24,6 @@ export class BatchesContainer extends PureComponent {
     return(
         <div>
           <Title content="All Batches" />
-          <RaisedButton label="Add batch"/>
           <main>
             < div className="BatchesContainer">
               { batches.map(this.renderBatch) }

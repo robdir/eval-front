@@ -37,17 +37,20 @@ class BatchSingle extends PureComponent {
 
     return(
       <article className="Batch">
-      <div>
-      <h3> Batch Number: {batchNum} </h3>
-      <ul>
-      <p> Students ({students.length}) : </p>
-      <p> {students.map(i => i.name)} </p>
-      <p> Start Date: {startsAt.substr(0,10)} </p>
-      <p> End Date: {endsAt.substr(0,10)} </p>
-      <RaisedButton label="Click to view students" style={style}
-       onClick={this.viewBatch(_id)} />
-      </ul>
-      </div>
+        <div classname='batch_single'>
+          <h3> Batch Number: {batchNum} </h3>
+            <ul>
+              <p> Students ({students.length}) : </p>
+              <p> {students.map(i => i.name)} </p>
+              <p> Start Date: {startsAt.substr(0,10)} </p>
+              <p> End Date: {endsAt.substr(0,10)} </p>
+              <RaisedButton
+                label="Click to view students"
+                style={style}
+                onClick={this.viewBatch(_id)}
+                primary={true} />
+            </ul>
+        </div>
       </article>
     )
   }

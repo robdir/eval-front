@@ -1,4 +1,4 @@
-article.Batch {
+.Batch {
   margin: 1.5em;
   padding: 10px;
   background-color: #f5fbfd12;
@@ -11,7 +11,11 @@ article.Batch {
   text-align: center;
 }
 
-article.Batch, ul {
+.Batch, ul {
   display: inline-block;
   text-align: center;
+}
+
+.batch_single {
+ background-color: rgb(0, 151, 167) !important;
 }

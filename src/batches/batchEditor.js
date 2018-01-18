@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import Title from '../components/UI/Title'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
+import './styles/batchEditor.css'
 
 const buttonStyle={
     textAlign: 'centre'

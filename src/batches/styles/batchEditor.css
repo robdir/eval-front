@@ -1,0 +1,12 @@
+.batch_editor {
+  margin: 1.5em;
+  padding: 10px;
+  background-color: #f5fbfd12;
+  border: solid 15px rgb(0, 151, 167);
+  border-radius: 10px;
+  width: fit-content;
+  text-align: center;
+  display: flex;
+  float: right;
+  flex-direction: column;
+}
