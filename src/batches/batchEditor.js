@@ -11,6 +11,10 @@ const buttonStyle={
     textAlign: 'centre'
 }
 
+const inputStyle={
+    color: 'Black'
+}
+
 class BatchEditor extends PureComponent {
     static propTypes = {
         CREATE_BATCH: PropTypes.func.isRequired,
@@ -35,15 +39,28 @@ class BatchEditor extends PureComponent {
                 <Title content="Add a new batch" />
                     <form onSubmit={this.submitBatch.bind(this)} ref="form">
                         <div className='input'>
-                            <TextField ref='batchNum' type='number' placeholder='Batch Number'/>
+                            <TextField
+                             ref='batchNum' 
+                             type='number'
+                             placeholder="Batch Number"
+                             inputStyle={inputStyle}
+                             />
                         </div>
                         <div className='input'>
                             <p> Start Date: </p>
-                            <TextField ref='startDate' type='date'/>
+                            <TextField
+                            ref='startDate'
+                            type='date'
+                            inputStyle={inputStyle}
+                            />
                         </div>
                         <div className='input'>
                             <p> End Date: </p>
-                            <TextField ref='endDate' type='date' />
+                            <TextField
+                             ref='endDate'
+                             type='date'
+                            inputStyle={inputStyle}
+                             />
                         </div>
                     </form>
                     <RaisedButton
