@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import StudentSingle from './studentSingle'
 import Title from '../components/UI/Title'
 import RaisedButton from 'material-ui/RaisedButton'
+import StudentEditor from './studentEditor'
 import './styles/studentsContainer.css'
 
 export class StudentsContainer extends PureComponent {
@@ -35,6 +36,7 @@ export class StudentsContainer extends PureComponent {
             <div className="StudentsContainer">
             {singleBatch.map(this.renderStudent)}
             </div>
+            <StudentEditor/>
           </main>
       </div>
       )
