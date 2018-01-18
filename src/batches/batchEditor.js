@@ -7,7 +7,7 @@ import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 
 const buttonStyle={
-    float: 'right'
+    textAlign: 'centre'
 }
 
 class BatchEditor extends PureComponent {
@@ -25,7 +25,7 @@ class BatchEditor extends PureComponent {
             endDate: this.refs.endDate.getValue(),
         }
         this.props.CREATE_BATCH(batch)
-        this.refs.form.requestFullscreen()
+        this.refs.form.reset()
     }
 
     render() {
