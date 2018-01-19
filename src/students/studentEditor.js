@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import { createBatch } from '../actions/batches'
 import PropTypes from 'prop-types'
 import Title from '../components/UI/Title'
 import TextField from 'material-ui/TextField'
