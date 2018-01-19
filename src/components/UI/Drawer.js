@@ -27,6 +27,9 @@ class Draw extends PureComponent {
                  open={this.state.open}
                  docked={true}>
                 <BatchEditor/>
+                <RaisedButton
+                label='Toggle draw'
+                onClick={this.Open}/>
                 </Drawer>
                 <RaisedButton
                 onClick={this.Open}

@@ -29,7 +29,6 @@ export class BatchesContainer extends PureComponent {
             < div className="BatchesContainer">
               { batches.map(this.renderBatch) }
             </div>
-            <BatchEditor/>
           </main>
         </div>
       )
