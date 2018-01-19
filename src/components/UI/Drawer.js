@@ -1,16 +1,12 @@
 import React, { PureComponent } from 'react';
 import Drawer from 'material-ui/Drawer';
-import Menu from 'material-ui/svg-icons/navigation/menu'
 import RaisedButton from 'material-ui/RaisedButton'
+import BatchEditor from '../../batches/batchEditor'
 
 
 const blue =  '#0097a7'
 const menuStyle = {
     backgroundColor: blue,
-}
-
-const buttonStyle = {
-    top: 50,
 }
 
 class Draw extends PureComponent {
@@ -30,13 +26,13 @@ class Draw extends PureComponent {
                  containerStyle={menuStyle}
                  open={this.state.open}
                  docked={true}>
+                <BatchEditor/>
                 </Drawer>
                 <RaisedButton
-                    style={buttonStyle}
-                    onClick={this.Open}
-                    label='Add a new batch'
-                    primary={true}
-                    />
+                onClick={this.Open}
+                label='Add a new batch'
+                primary={true}
+                />
 
             </div>
         );
