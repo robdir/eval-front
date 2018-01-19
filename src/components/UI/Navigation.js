@@ -7,6 +7,7 @@ import AppBar from 'material-ui/AppBar'
 import IconButton from 'material-ui/IconButton'
 import HomeIcon from 'material-ui/svg-icons/action/home'
 import FlatButton from 'material-ui/FlatButton'
+import Draw from './Drawer'
 
 const TITLE = 'Student Evaluator'
 

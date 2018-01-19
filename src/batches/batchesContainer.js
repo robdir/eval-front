@@ -3,7 +3,7 @@ import { grabBatches } from '../actions/batches'
 import { connect } from 'react-redux'
 import BatchSingle from './batchSingle'
 import Title from '../components/UI/Title'
-import RaisedButton from 'material-ui/RaisedButton'
+import Draw from '../components/UI/Drawer'
 import BatchEditor from './batchEditor'
 import './styles/batchesContainer.css'
 
@@ -23,10 +23,8 @@ export class BatchesContainer extends PureComponent {
 
     return(
         <div>
+          <Draw/>
           <Title content="All Batches" />
-          <RaisedButton 
-          label='Add a new batch'
-          primary='true'/>
           <main>
             < div className="BatchesContainer">
               { batches.map(this.renderBatch) }
