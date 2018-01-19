@@ -37,7 +37,7 @@ class BatchEditor extends PureComponent {
     render() {
         return(
             <div className='batch_editor'>
-                <Title content="Add a new batch" />
+                <Title content="Add a new batch" style={inputStyle}/>
                     <form onSubmit={this.submitBatch.bind(this)} ref="form">
                         <div className='input'>
                             <TextField

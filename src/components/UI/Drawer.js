@@ -3,7 +3,6 @@ import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton'
 import BatchEditor from '../../batches/batchEditor'
 
-
 const blue =  '#0097a7'
 const menuStyle = {
     backgroundColor: blue,
@@ -26,7 +25,9 @@ class Draw extends PureComponent {
                  containerStyle={menuStyle}
                  open={this.state.open}
                  docked={true}>
+
                 <BatchEditor/>
+
                 <RaisedButton
                 label='Toggle draw'
                 onClick={this.Open}/>
