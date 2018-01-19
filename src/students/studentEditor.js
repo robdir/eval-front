@@ -52,11 +52,11 @@ class StudentEditor extends PureComponent {
                         />
                         </div>
                 </form>
-                <RaisedButton
-                    style={buttonStyle}
-                    onClick={this.submitBatch.bind(this)}
-                    label="Submit"
-                    primary={true} />
+                    <RaisedButton
+                        style={buttonStyle}
+                        onClick={this.submitBatch.bind(this)}
+                        label="Submit"
+                        primary={true} />
             </div>
         )
     }
