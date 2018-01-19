@@ -3,8 +3,7 @@ import { grabBatches } from '../actions/batches'
 import { connect } from 'react-redux'
 import BatchSingle from './batchSingle'
 import Title from '../components/UI/Title'
-import Draw from '../components/UI/Drawer'
-import BatchEditor from './batchEditor'
+import Draw from '../components/UI/DrawerBatch'
 import './styles/batchesContainer.css'
 
 export class BatchesContainer extends PureComponent {
