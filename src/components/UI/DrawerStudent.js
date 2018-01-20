@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton'
-import StudentEditor from '../students/studentEditor'
+import StudentEditor from '../../students/studentEditor'
+
 const blue = '#0097a7'
 const menuStyle = {
     backgroundColor: blue,

@@ -4,8 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import StudentSingle from './studentSingle'
 import Title from '../components/UI/Title'
-import RaisedButton from 'material-ui/RaisedButton'
-import StudentEditor from './studentEditor'
+import Draw from '../components/UI/DrawerStudent'
 import './styles/studentsContainer.css'
 
 export class StudentsContainer extends PureComponent {
@@ -31,12 +30,11 @@ export class StudentsContainer extends PureComponent {
     return(
       <div>
         <Title content='All students from batch'/>
-        <RaisedButton label='Click to add student'/>
+        <Draw/>
           <main>
             <div className="StudentsContainer">
             {singleBatch.map(this.renderStudent)}
             </div>
-            <StudentEditor/>
           </main>
       </div>
       )
