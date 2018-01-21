@@ -69,7 +69,7 @@ class BatchEditor extends PureComponent {
                     </form>
                     <RaisedButton
                     style={buttonStyle}
-                    onClick={ this.submitBatch.bind(this)}
+                    onClick={ this.submitBatch.bind(this) }
                     label="Add batch"
                     primary={true}/>
             </div>

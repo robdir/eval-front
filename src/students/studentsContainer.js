@@ -29,9 +29,9 @@ export class StudentsContainer extends PureComponent {
 
     return(
       <div>
-        <Title content='All students from batch'/>
-        <Draw/>
           <main>
+            <Title content='All students from batch' />
+            <Draw />
             <div className="StudentsContainer">
             {singleBatch.map(this.renderStudent)}
             </div>

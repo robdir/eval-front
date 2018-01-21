@@ -11,7 +11,7 @@ export const CREATE_BATCH = 'CREATE_BATCH'
 
 const api = new ApiClient()
 
-export default (batch) => {
+export const createBatch = (batch) => {
     return dispatch => {
         dispatch({ type: APP_LOADING })
 
