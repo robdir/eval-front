@@ -1,4 +1,4 @@
-import { GRABBED_BATCHES, CREATE_BATCH } from '../actions/batches'
+import { GRABBED_BATCHES, CREATE_BATCH, DELETE_BATCH } from '../actions/batches'
 
 
 export default (currentState = [], {type, payload} = {}) => {
@@ -9,6 +9,9 @@ export default (currentState = [], {type, payload} = {}) => {
     case CREATE_BATCH:
       const newBatch = {...payload}
       return [newBatch].concat(currentState)
+
+    case DELETE_BATCH:
+      return currentState.filter((batch) => batch._id !== payload._id)
 
     default :
       return currentState
