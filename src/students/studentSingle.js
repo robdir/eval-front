@@ -27,13 +27,21 @@ class StudentSingle extends PureComponent {
     
     return(
       <article className="Student">
-      <div>
-      <h3 className="studentName"> {students[0].name} </h3>
-      <p> Batch: {batchNum} </p>
+        <div>
 
-      <img src={students[0].picture} alt='derp'/>
+            {students.length > 0 ? (
+            <div>
+            <h3 className="studentName"> {students[0].name} </h3>
+            <p> Batch: {batchNum} </p>
+            <img src={students[0].picture} alt='derp' />
+            </div>
+            
+            ) : (
+            <p> There are no students in this batch, please add them using the above button </p>
+            )}
 
-      </div>
+
+        </div>
       </article>
     )
   }

@@ -26,7 +26,6 @@ export class StudentsContainer extends PureComponent {
 
   render() {
     const {singleBatch} = this.props 
-
     return(
       <div>
           <main>
