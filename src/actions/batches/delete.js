@@ -6,6 +6,7 @@ import {
     LOAD_ERROR,
     LOAD_SUCCESS
 } from '../loading'
+
 import { push } from 'react-router-redux'
 
 export const DELETE_BATCH = 'DELETE_BATCH'
@@ -16,7 +17,7 @@ export const deleteBatch = (batchId) => {
     return dispatch => {
         dispatch({ type: APP_LOADING })
 
-        api.delete(`${batchId}`)
+        api.delete(`/${batchId}`)
             .then((res) => {
                 dispatch({ type: APP_DONE_LOADING })
                 dispatch({ type: LOAD_SUCCESS })

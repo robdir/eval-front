@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import StudentSingle from './studentSingle'
 import Title from '../components/UI/Title'
 import Draw from '../components/UI/DrawerStudent'
+import DeleteButton from '../components/DeleteBatchButton'
 import './styles/studentsContainer.css'
 
 export class StudentsContainer extends PureComponent {
@@ -25,14 +26,17 @@ export class StudentsContainer extends PureComponent {
   }
 
   render() {
-    const {singleBatch} = this.props 
+    const {singleBatch, match} = this.props 
     return(
       <div>
           <main>
             <Title content='All students from batch' />
             <Draw />
+            {console.log()}           
             <div className="StudentsContainer">
             {singleBatch.map(this.renderStudent)}
+            <DeleteButton
+              batchId={match.params.batchId} />
             </div>
           </main>
       </div>

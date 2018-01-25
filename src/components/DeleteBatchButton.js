@@ -6,9 +6,9 @@ import {deleteBatch} from '../actions/batches'
 
 class DeleteBatchButton extends PureComponent {
 
-deleteBatch = () => {
-    const { deleteBatch, batch } = this.props
-    deleteBatch(batch)
+deleteBatch = (batchId) => {
+    const { deleteBatch } = this.props
+    deleteBatch(batchId)
 }
 
     render() {

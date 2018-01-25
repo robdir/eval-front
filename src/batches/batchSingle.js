@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 import RaisedButton from 'material-ui/RaisedButton'
-import DeleteButton from '../components/DeleteBatchButton'
 import './styles/batchSingle.css'
 
 const style = {
@@ -50,7 +49,6 @@ class BatchSingle extends PureComponent {
                 style={style}
                 onClick={this.viewBatch(_id)}
                 primary={true} />
-              <DeleteButton />
             </ul>
         </div>
       </article>

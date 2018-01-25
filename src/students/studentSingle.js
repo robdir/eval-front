@@ -37,6 +37,7 @@ class StudentSingle extends PureComponent {
             </div>
             
             ) : (
+              
             <p> There are no students in this batch, please add them using the above button </p>
             )}
 
