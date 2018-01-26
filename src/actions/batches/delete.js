@@ -16,7 +16,6 @@ const api = new ApiClient()
 export const deleteBatch = (batchId) => {
     return dispatch => {
         dispatch({ type: APP_LOADING })
-
         api.delete(`/${batchId}`)
             .then((res) => {
                 dispatch({ type: APP_DONE_LOADING })
