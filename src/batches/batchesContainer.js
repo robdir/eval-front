@@ -22,6 +22,7 @@ export class BatchesContainer extends PureComponent {
 
     return(
         <div>
+          {<br/>}
           <Draw/>
           <Title content="All Batches" />
           <main>
