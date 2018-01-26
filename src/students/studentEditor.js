@@ -14,9 +14,6 @@ const inputStyle = {
 }
 
 class StudentEditor extends PureComponent {
-    static propTypes = {
-        createBatch: PropTypes.func.isRequired,
-    }
 
     state = {}
 

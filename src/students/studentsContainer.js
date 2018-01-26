@@ -46,7 +46,7 @@ export class StudentsContainer extends PureComponent {
                   label="Delete batch"
                   primary={true}
                   icon={<DeleteIcon />}
-                  onClick={this.deleteBatch(match.params.batchId)} />
+                  onClick={this.props.deleteBatch(this.props.match.params.batchId)} />
               </div>
                 <Title content='All students from batch' />
                   <div className="StudentsContainer">
