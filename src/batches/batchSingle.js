@@ -2,11 +2,31 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
-import RaisedButton from 'material-ui/RaisedButton'
+import Menu from 'material-ui/Menu'
+import MenuItem from 'material-ui/MenuItem'
 import './styles/batchSingle.css'
 
-const style = {
-  margin: 20,
+const styles = {
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+  },
+  gridList: {
+    width: 700,
+    height: 100,
+    marginleft: 50,
+  },
+  titleStyle: {
+    color: 'black',
+    fontSize: '30px',
+  },
+  subtitleStyle: {
+    color: 'black',
+  },
+  button: {
+    margin: 20
+  }
 };
 
 class BatchSingle extends PureComponent {
@@ -33,25 +53,28 @@ class BatchSingle extends PureComponent {
 
 
   render() {
-    const { batchNum, startsAt, endsAt, students, _id } = this.props
+    const {students, _id, startsAt, endsAt, batchNum} = this.props
 
     return(
-      <article className="Batch">
-        <div className='batch_single'>
-          <h3> Batch Number: {batchNum} </h3>
-            <ul>
-              <p> Students ({students.length}) : </p>
-              <p> {students.map(i => i.name)} </p>
-              <p> Start Date: {startsAt} </p>
-              <p> End Date: {endsAt} </p>
-              <RaisedButton
-                label="Click to view students"
-                style={style}
-                onClick={this.viewBatch(_id)}
-                primary={true} />
-            </ul>
-        </div>
-      </article>
+
+      <div style={styles.root}
+      className="batches">
+      <Menu
+        style={styles.gridList}
+        menuItemStyle={styles.subtitleStyle}
+      >
+        <MenuItem
+          className='menuBatch'
+          primaryText={"Batch " + batchNum}
+          secondaryText={<span> 
+            {"Starts at: " + startsAt
+            + " / Ends at: " + endsAt
+            + " / No. of students: " + students.length}
+            </span> } 
+          onClick={this.viewBatch(_id)}
+          />
+      </Menu>
+      </div>
     )
   }
 }

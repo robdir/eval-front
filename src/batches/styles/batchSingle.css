@@ -1,4 +1,4 @@
-.batch_single {
+/* .batch_single {
   margin: 1.5em;
   padding: 10px;
   background-color: #f5fbfd12;
@@ -7,8 +7,11 @@
   height: fit-content;
   overflow: hidden;
   display: flex;
-}
+  flex-wrap: wrap;
+  justify-content: space-around;
+} */
 
-.Batch, ul {
-  text-align: center;
+.batches {
+    border: solid 10px rgb(0, 151, 167);
+    border-radius: 2.5px;
 }

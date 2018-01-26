@@ -10,7 +10,6 @@ import RaisedButton from 'material-ui/RaisedButton'
 import DeleteIcon from 'material-ui/svg-icons/action/delete'
 import { deleteBatch } from '../actions/batches'
 
-
 export class StudentsContainer extends PureComponent {
   static propTypes = {
     grabBatch: PropTypes.func.isRequired,
@@ -39,10 +38,9 @@ export class StudentsContainer extends PureComponent {
     return(
       <div>
           <main>
-            <Title content='All students from batch' />
+            {<br/>}
             <Draw />
-            <div className="StudentsContainer">
-            {singleBatch.map(this.renderStudent)}
+            {<br/>}
               <div className='DeleteBatchButton'>
                 <RaisedButton
                   label="Delete batch"
@@ -50,7 +48,10 @@ export class StudentsContainer extends PureComponent {
                   icon={<DeleteIcon />}
                   onClick={this.deleteBatch(match.params.batchId)} />
               </div>
-            </div>
+                <Title content='All students from batch' />
+                  <div className="StudentsContainer">
+                    {singleBatch.map(this.renderStudent)}
+                  </div>
           </main>
       </div>
       )
