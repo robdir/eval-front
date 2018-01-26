@@ -13,10 +13,10 @@ export const DELETE_BATCH = 'DELETE_BATCH'
 
 const api = new ApiClient()
 
-export const deleteBatch = (batchId) => {
+export const deleteBatch = (batch) => {
     return dispatch => {
         dispatch({ type: APP_LOADING })
-        api.delete(`/${batchId}`)
+        api.delete(`/${batch._id}`)
             .then((res) => {
                 dispatch({ type: APP_DONE_LOADING })
                 dispatch({ type: LOAD_SUCCESS })

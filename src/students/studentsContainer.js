@@ -15,10 +15,10 @@ export class StudentsContainer extends PureComponent {
     grabBatch: PropTypes.func.isRequired,
     deleteBatch: PropTypes.func.isRequired
   }
-  
-  deleteBatch = (batchId) => {
-    const { deleteBatch } = this.props
-    deleteBatch(batchId)
+
+  deleteBatch = () => {
+    const { deleteBatch, singleBatch } = this.props
+    deleteBatch(singleBatch)
   }
 
   componentWillMount() {
@@ -46,7 +46,7 @@ export class StudentsContainer extends PureComponent {
                   label="Delete batch"
                   primary={true}
                   icon={<DeleteIcon />}
-                  onClick={() => {deleteBatch(this.props.match.params.batchId)}} />
+                  onClick={this.deleteBatch} />
               </div>
                 <Title content='All students from batch' />
                   <div className="StudentsContainer">
